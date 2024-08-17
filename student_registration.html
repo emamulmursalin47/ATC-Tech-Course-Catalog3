@@ -15,7 +15,7 @@
         <p style="margin: 10px 0; font-style: italic; color: #0f79b9; font-size: 14px; letter-spacing: 0.5px;">FORM/XXX/1</p>
         <div style="width: 50px; height: 2px; background-color: #0f79b9; margin: 15px auto;"></div>
     </div>
-    <form id="admissionForm" style="background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <form id="admissionForm" action="process_form.php" method="POST" enctype="multipart/form-data" style="background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
         <div style="margin-bottom: 20px;">
             <label for="applicantPhoto" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant Photo: Attach</label>
             <input type="file" id="applicantPhoto" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">

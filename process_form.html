@@ -1,0 +1,85 @@
+<?php
+// Database connection
+$host = 'localhost';
+$db   = 'atc_academy';
+
+$charset = 'utf8mb4';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+// Function to handle file upload
+function uploadFile($file, $targetDir) {
+    $fileName = basename($file["name"]);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+    // Allow certain file formats
+    $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+    if (in_array($fileType, $allowTypes)) {
+        if (move_uploaded_file($file["tmp_name"], $targetFilePath)) {
+            return $fileName;
+        }
+    }
+    return false;
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Handle file uploads
+    $targetDir = "uploads/";
+    $applicantPhoto = uploadFile($_FILES["applicantPhoto"], $targetDir);
+    $nidFront = uploadFile($_FILES["nidFront"], $targetDir);
+    $nidBack = uploadFile($_FILES["nidBack"], $targetDir);
+    $applicantSignature = uploadFile($_FILES["applicantSignature"], $targetDir);
+    $officeSignature = uploadFile($_FILES["officeSignature"], $targetDir);
+
+    // Prepare SQL statement
+    $sql = "INSERT INTO student_admissions (applicant_photo, nid_front, nid_back, applicant_name, applicant_mobile, email, father_name, father_mobile, mother_name, mother_mobile, guardian_name, guardian_mobile, address, institute_name, present_class, date_of_birth, id_type, course_name, duration, course_fee, payment_method, payment_amount, course_starting, applicant_signature, office_signature) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $applicantPhoto,
+            $nidFront,
+            $nidBack,
+            $_POST['applicantName'],
+            $_POST['applicantMobile'],
+            $_POST['email'],
+            $_POST['fatherName'],
+            $_POST['fatherMobile'],
+            $_POST['motherName'],
+            $_POST['motherMobile'],
+            $_POST['guardianName'],
+            $_POST['guardianMobile'],
+            $_POST['address'],
+            $_POST['instituteName'],
+            $_POST['presentClass'],
+            $_POST['dateOfBirth'],
+            $_POST['birthCertificate'],
+            $_POST['courseName'],
+            $_POST['duration'],
+            $_POST['courseFee'],
+            $_POST['paymentMethod'],
+            $_POST['paymentAmount'],
+            $_POST['courseStarting'],
+            $applicantSignature,
+            $officeSignature
+        ]);
+
+        echo "Form submitted successfully!";
+    } catch (\PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+} else {
+    echo "Invalid request method.";
+}
