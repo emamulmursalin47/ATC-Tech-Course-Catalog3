@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATC Tech Limited - Student Admission Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; color: #3c485a;">
+    <div style="text-align: center; margin-bottom: 20px; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <img src="atc-logo.png" alt="ATC Logo" style="max-width: 100px;">
+        <h2 style="color: #0f79b9; margin-bottom: 5px;">ATC Tech Limited</h2>
+        <p style="margin: 5px 0;">ATC ACADEMY: Level-7, Suit-A, 69/M/TG, RAJSHANI</p>
+        <h3 style="color: #0f79b9; margin-top: 15px;">Student Admission Form</h3>
+        <p style="margin: 5px 0; font-style: italic;">FORM/XXX/1</p>
+    </div>
+
+    <form id="admissionForm" style="background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div style="margin-bottom: 20px;">
+            <label for="applicantPhoto" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant Photo: Attach</label>
+            <input type="file" id="applicantPhoto" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="applicantName" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant Name</label>
+                <input type="text" id="applicantName" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="applicantMobile" style="display: block; margin-bottom: 5px; font-weight: bold;">Mobile</label>
+                <input type="text" id="applicantMobile" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+            <input type="email" id="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="fatherName" style="display: block; margin-bottom: 5px; font-weight: bold;">Father Name</label>
+                <input type="text" id="fatherName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="fatherMobile" style="display: block; margin-bottom: 5px; font-weight: bold;">Mobile</label>
+                <input type="text" id="fatherMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="motherName" style="display: block; margin-bottom: 5px; font-weight: bold;">Mother Name</label>
+                <input type="text" id="motherName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="motherMobile" style="display: block; margin-bottom: 5px; font-weight: bold;">Mobile</label>
+                <input type="text" id="motherMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="guardianName" style="display: block; margin-bottom: 5px; font-weight: bold;">Guardian Name</label>
+                <input type="text" id="guardianName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="guardianMobile" style="display: block; margin-bottom: 5px; font-weight: bold;">Mobile</label>
+                <input type="text" id="guardianMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="address" style="display: block; margin-bottom: 5px; font-weight: bold;">Address</label>
+            <textarea id="address" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"></textarea>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="instituteName" style="display: block; margin-bottom: 5px; font-weight: bold;">Institute Name</label>
+                <input type="text" id="instituteName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="presentClass" style="display: block; margin-bottom: 5px; font-weight: bold;">Present Class</label>
+                <input type="text" id="presentClass" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="dateOfBirth" style="display: block; margin-bottom: 5px; font-weight: bold;">Date of Birth</label>
+                <input type="date" id="dateOfBirth" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="birthCertificate" style="display: block; margin-bottom: 5px; font-weight: bold;">NID/Birth Certificate</label>
+                <select id="birthCertificate" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="">Select</option>
+                    <option value="nid">NID</option>
+                    <option value="birth">Birth Certificate</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="courseName" style="display: block; margin-bottom: 5px; font-weight: bold;">Course Name</label>
+                <select id="courseName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="">Select</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                </select>
+            </div>
+            <div style="flex: 1;">
+                <label for="duration" style="display: block; margin-bottom: 5px; font-weight: bold;">Duration</label>
+                <input type="text" id="duration" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; background-color: #f9f9f9;">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="courseFee" style="display: block; margin-bottom: 5px; font-weight: bold;">Course Fee</label>
+                <input type="text" id="courseFee" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; background-color: #f9f9f9;">
+            </div>
+            <div style="flex: 1;">
+                <label for="paymentMethod" style="display: block; margin-bottom: 5px; font-weight: bold;">Payment Method</label>
+                <select id="paymentMethod" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="">Select</option>
+                    <option value="full">Full Payment</option>
+                    <option value="installment">Installment</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="paymentAmount" style="display: block; margin-bottom: 5px; font-weight: bold;">Payment Amount</label>
+                <input type="text" id="paymentAmount" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; background-color: #f9f9f9;">
+            </div>
+            <div style="flex: 1;">
+                <label for="courseStarting" style="display: block; margin-bottom: 5px; font-weight: bold;">Course Starting of</label>
+                <input type="date" id="courseStarting" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="applicantSignature" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant's Signature</label>
+            <input type="file" id="applicantSignature" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label for="officeSignature" style="display: block; margin-bottom: 5px; font-weight: bold;">Office Signature</label>
+            <input type="file" id="officeSignature" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        </div>
+
+        <button type="submit" style="background-color: #0f79b9; color: #ffffff; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%;">Submit</button>
+    </form>
+
+    <button onclick="window.print()" style="background-color: #3c485a; color: #ffffff; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 20px;">Print</button>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+
+        document.getElementById('courseName').addEventListener('change', function() {
+            const courseName = this.value;
+            let duration = '';
+            let fee = '';
+
+            if (courseName === 'course1') {
+                duration = '6 months';
+                fee = '10000';
+            } else if (courseName === 'course2') {
+                duration = '3 months';
+                fee = '5000';
+            }
+
+            document.getElementById('duration').value = duration;
+            document.getElementById('courseFee').value = fee;
+        });
+
+        document.getElementById('paymentMethod').addEventListener('change', function() {
+            const method = this.value;
+            const courseFee = document.getElementById('courseFee').value;
+
+            if (method === 'full') {
+                document.getElementById('paymentAmount').value = courseFee;
+            } else if (method === 'installment') {
+                document.getElementById('paymentAmount').value = (parseInt(courseFee) / 2).toString();
+            }
+        });
+    </script>
+</body>
+</html>
