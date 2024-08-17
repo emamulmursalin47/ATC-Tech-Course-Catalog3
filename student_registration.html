@@ -20,7 +20,18 @@
             <label for="applicantPhoto" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant Photo: Attach</label>
             <input type="file" id="applicantPhoto" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </div>
-
+    
+        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+            <div style="flex: 1;">
+                <label for="nidFront" style="display: block; margin-bottom: 5px; font-weight: bold;">NID Front Side: Attach</label>
+                <input type="file" id="nidFront" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1;">
+                <label for="nidBack" style="display: block; margin-bottom: 5px; font-weight: bold;">NID Back Side: Attach</label>
+                <input type="file" id="nidBack" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+            </div>
+        </div>
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="applicantName" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant Name</label>
@@ -31,12 +42,12 @@
                 <input type="text" id="applicantMobile" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="margin-bottom: 20px;">
             <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
             <input type="email" id="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="fatherName" style="display: block; margin-bottom: 5px; font-weight: bold;">Father Name</label>
@@ -47,7 +58,7 @@
                 <input type="text" id="fatherMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="motherName" style="display: block; margin-bottom: 5px; font-weight: bold;">Mother Name</label>
@@ -58,7 +69,7 @@
                 <input type="text" id="motherMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="guardianName" style="display: block; margin-bottom: 5px; font-weight: bold;">Guardian Name</label>
@@ -69,12 +80,12 @@
                 <input type="text" id="guardianMobile" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="margin-bottom: 20px;">
             <label for="address" style="display: block; margin-bottom: 5px; font-weight: bold;">Address</label>
             <textarea id="address" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"></textarea>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="instituteName" style="display: block; margin-bottom: 5px; font-weight: bold;">Institute Name</label>
@@ -85,7 +96,7 @@
                 <input type="text" id="presentClass" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="dateOfBirth" style="display: block; margin-bottom: 5px; font-weight: bold;">Date of Birth</label>
@@ -100,7 +111,7 @@
                 </select>
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="courseName" style="display: block; margin-bottom: 5px; font-weight: bold;">Course Name</label>
@@ -115,7 +126,7 @@
                 <input type="text" id="duration" readonly style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; background-color: #f9f9f9;">
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="courseFee" style="display: block; margin-bottom: 5px; font-weight: bold;">Course Fee</label>
@@ -130,7 +141,7 @@
                 </select>
             </div>
         </div>
-
+    
         <div style="display: flex; gap: 15px; margin-bottom: 20px;">
             <div style="flex: 1;">
                 <label for="paymentAmount" style="display: block; margin-bottom: 5px; font-weight: bold;">Payment Amount</label>
@@ -141,17 +152,17 @@
                 <input type="date" id="courseStarting" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
         </div>
-
+    
         <div style="margin-bottom: 20px;">
             <label for="applicantSignature" style="display: block; margin-bottom: 5px; font-weight: bold;">Applicant's Signature</label>
             <input type="file" id="applicantSignature" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </div>
-
+    
         <div style="margin-bottom: 20px;">
             <label for="officeSignature" style="display: block; margin-bottom: 5px; font-weight: bold;">Office Signature</label>
             <input type="file" id="officeSignature" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
         </div>
-
+    
         <button type="submit" style="background-color: #0f79b9; color: #ffffff; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%;">Submit</button>
     </form>
 
